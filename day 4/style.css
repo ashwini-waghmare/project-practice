@@ -1,0 +1,192 @@
+/* body{
+    background-color: lightblue;
+    font-family: Arial;
+}
+
+.container{
+    width: 500px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border: 2px solid black;
+}
+
+h1{
+    color: red;
+    font-size: 40px;
+}
+
+h2{
+    color: green;
+}
+
+p{
+    font-size: 18px;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+} */
+
+/* nav{
+    display: flex;
+    justify-content: center;
+    gap: 40px; */
+    /* height: 60px;
+    padding: 10px; */
+    /* background-color: lightblue;
+}
+
+nav a{
+    font-size: 30px;
+    color: red;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: green;
+    text-decoration: underline;
+} */
+/* 
+body{
+    font-family: Arial;
+    margin: 0;
+}
+
+.cards{
+    display: flex;
+    background-color: lightblue;
+    height: 500px;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card{
+    width: 600px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+} */
+
+/* body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+h1{
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media(max-width: 600px){
+    .cards{
+        flex-direction: column;
+    }
+} */
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        background-color: aqua;
+    }
+
+    nav a{
+        text-decoration: none;
+        font-size: 30px;
+    }
+
+    nav a:hover{
+        color: red;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    p{
+        text-align: center;
+        font-size: 30px;
+        font-style: italic;
+        color: green;
+    }
+
+    .cards{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin: 60px auto;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+
+    .card{
+        background-color: aqua;
+        border: 2px solid black;
+        color: black;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .skill{
+        text-align: center;
+        color: red; 
+        font-size: 35px; 
+        margin-top: 40px; 
+        margin-bottom: 40px;
+    }
+
+    .heading{
+        text-align: center; 
+        color: red; 
+        font-size: 35px; 
+        margin-top: 40px;
+    }
+
+    .card:hover{
+        background-color: black;
+        color: white;
+    }
+
+    @media(max-width: 600px){
+        .cards{
+            flex-direction: column;
+        }
+    }
+
+    footer{
+        background-color: gray;
+    }

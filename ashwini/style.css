@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    background-color: #0F172A;
+    font-family: Arial;
+    color: #CBD5E1;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color: #1E293B;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a{
+    color: #F8FAFC;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.skills-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+#skills ul{
+    padding: 20px;
+    margin: 20px;
+}
+
+nav a:hover{
+    color: #38BDF8;
+}
+
+h1{
+    font-size: 35px;
+    color: #F8FAFC;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 25px;
+    color: #38BDF8;
+    margin: 20px;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+    line-height: 1.5;
+}
+
+#about{
+    background-color: #1E293B;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+#skills{
+    background-color: #1E293B;;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+#skills ul{
+    list-style-type: none;
+    padding: 20px;
+    margin: 20px;
+}
+
+#skills li{
+    background-color: #0F172A;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+#projects{
+    background-color: #1E293B;;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+.proj-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#projects .proj-container > div{
+    background-color: #0F172A;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    width: 250px;
+}
+
+#projects div{
+    background-color: #0F172A;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #334155;
+    border-radius: 10px;
+}
+
+#contact {
+    background-color: #1E293B;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+#contact button{
+    background-color: #38BDF8;
+    color: #020617;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#contact button:hover{
+    background-color: #0EA5E9;
+    color: white;
+}
+
+footer{
+    background-color: #020617;
+    color: #CBD5E1;
+    padding: 20px;
+    text-align: center;
+}

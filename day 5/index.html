@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            background-color: lightblue;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .box{
+                background-color: lightpink;
+                padding: 15px;
+            }
+
+            .box h1{
+                font-size: 25px;
+            }
+        }
+
+        .cards{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card{
+            flex: 1;
+            padding: 30px;
+            text-align: center;
+            background-color: lightgreen;
+        }
+
+        @media (max-width: 600px){
+            .cards{
+                flex-direction: column;
+            }
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            background-color: #333;
+        }
+
+        .nav-links{
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a{
+            color: black;
+            text-decoration: none;
+        }
+
+        #menubtn{
+            display: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <h2>My Website</h2>
+
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Objects</a>
+        </div>
+    </div>
+
+    <button id="menubtn">☰</button>
+
+    <div class="box">
+        <h1>Hello Ashwini</h1>
+        <p>Welcome to our website!</p>
+    </div>
+
+    <div class="cards">
+       <div class="card">
+          <h2>HTML</h2>
+          <p>I love HTML!</p>
+       </div>
+
+       <div class="card">
+          <h2>CSS</h2>
+          <p>I love CSS!</p>
+       </div>
+
+       <div class="card">
+          <h2>JavaScript</h2>
+          <p>I love JavaScript!</p>
+       </div>
+    </div>
+
+
+
+
+
+
+    <!-- <h1 id="name">Hello Ashwini</h1>
+
+    <button onclick="changename()">Change Title</button>
+
+    <!-- <p class="msg">Hello!</p> -->
+
+    
+    <!-- <h1 id="title">Welcome</h1>
+    <button id="btn">Click</button> -->
+
+    <!-- <input type="text" id="username" placeholder="Enter Your Name">
+    <p id="output"></p> -->
+
+    <!-- <select id="city">
+        <option value="">Select City</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Mathura">Mathura</option>
+        <option value="Vrindavan">Vrindavan</option>
+    </select>
+
+    <p id="result"></p> -->
+
+    <!-- <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Enter Your Name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="formOutput"></p> -->
+
+    <!-- <form id="login">
+        <input type="text" id="username" placeholder="Enter Name">
+        <input type="password" id="password" placeholder="Password">
+        <button id="submit">Login</button>
+    </form>
+
+    <p id="output"></p> -->
+    <!-- 
+    <form id="registerForm">
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="email" id="email" placeholder="Enter Email">
+
+    <select id="city">
+        <option value="">Select City</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Mathura">Mathura</option>
+        <option value="Vrindavan">Vrindavan</option>
+    </select>
+
+    <button type="submit">Register</button>
+
+    </form>
+
+    <p id="result"></p> -->
+
+    
+
+    <script src="day6.js"></script>
+</body>
+</html>
