@@ -1,64 +1,363 @@
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>DAY 2</title>
-        </head>
 
-        <body>
-            <header>
-                <h1>Ashwini Waghmare</h1>
-            </header>
+<!DOCTYPE html>
+<html lang="en">
 
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <section>
-                <h2>I am <b>Full Stack Developer.</b></h2>
-                <p>I want to become a Software Engineering and work on the IT Comoanies</p>
+    <title>Day 2 | Ashwini Waghmare</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f3ff;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4f46e5, #9333ea);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #ede9fe;
+        }
+
+        /* Navbar */
+        nav {
+            background: white;
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4f46e5;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #9333ea;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 55px 25px;
+            background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+            border-radius: 22px;
+            margin-bottom: 30px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #4338ca;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #9333ea;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: #4f46e5;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7e22ce;
+            transform: translateY(-3px);
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            border: 1px solid #e9e5ff;
+            box-shadow: 0 5px 18px #312e8110;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px #4f46e525;
+        }
+
+        .card h2,
+        .card h3 {
+            color: #5b21b6;
+            margin-bottom: 12px;
+        }
+
+        /* Media Section */
+        .media-box {
+            margin-bottom: 30px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 15px auto 0;
+            border-radius: 12px;
+            background: #ede9fe;
+        }
+
+        /* Map */
+        .map-section {
+            margin-bottom: 30px;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 16px;
+            margin-top: 15px;
+        }
+
+        /* Aside */
+        aside {
+            background: #ede9fe;
+            padding: 20px;
+            border-left: 5px solid #7c3aed;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            margin-top: 45px;
+        }
+
+        footer p {
+            color: #ddd6fe;
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                gap: 18px;
+                padding: 15px 8px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero h2 {
+                font-size: 25px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="home">
+        <h1>Ashwini Waghmare ✨</h1>
+        <p>Welcome to My Personal Website</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <h2>Hello, I'm a <span class="highlight">Full Stack Developer</span></h2>
+
+            <p>
+                My goal is to become a Software Engineer
+                and work with IT companies.
+            </p>
+
+            <a href="#about" class="btn">Explore My Website →</a>
+        </section>
+
+        <div class="cards">
+
+            <section class="card" id="about">
+                <h2>👩‍💻 About Me</h2>
+
+                <p>
+                    Hello! I am Ashwini Waghmare from Aurangabad.
+                    I am learning web development and improving
+                    my programming skills every day.
+                </p>
+
+                <p>
+                    My dream is to become a successful Software Engineer.
+                </p>
             </section>
 
-            <article>
-                <h2>Latest News Ashwini Waghmare from aurangabad has selected to be an Chief Minister of India</h2>
+            <article class="card">
+                <h2>📰 Latest News</h2>
+
+                <p>
+                    This is my practice article for learning HTML
+                    semantic tags and CSS styling.
+                </p>
+
+                <p>
+                    Keep practising and keep building new projects!
+                </p>
             </article>
 
-            <footer>
-                Ashwini Waghmare. <br>
-                contact at @9421891124
-            </footer>
+            <section class="card">
+                <h2>🎯 My Dream</h2>
 
-            <main>
-                <h2>it is main tag that locates the main part of webpage</h2>
-            </main>
+                <p>
+                    I want to build modern websites, learn new
+                    technologies and grow as a Software Engineer.
+                </p>
+            </section>
 
-            <div>
-                <h2>hello</h2>
-                <p>i am a web developer</p>
-            </div>
+            <section class="card">
+                <h2>💡 Daily Tip</h2>
 
-            <p>i am a <span>Ashwini Waghmare.</span></p>
+                <p>
+                    Consistency is the key to success.
+                    Practise coding every day and never stop learning!
+                </p>
 
-            <aside>
-                <p>it places the content in the sidebars. <br>
-                and also it is used for Tips</p>
-            </aside>
+                <aside>
+                    <strong>Remember:</strong>
+                    Every expert was once a beginner.
+                </aside>
+            </section>
+
+        </div>
+
+        <section class="card media-box" id="media">
+            <h2>🎵 Audio Player</h2>
+            <p>Listen to your favourite audio.</p>
 
             <audio controls>
                 <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
             </audio>
 
-            <video controls width="300px">
+            <h2 style="margin-top: 30px;">🎬 Video Player</h2>
+            <p>Watch a video directly on this webpage.</p>
+
+            <video controls>
                 <source src="video.mp4" type="video/mp4">
+                Your browser does not support video.
             </video>
+        </section>
+
+        <section class="card map-section">
+            <h2>📍 Explore Mumbai</h2>
+            <p>Here is an embedded Google Map of Mumbai.</p>
 
             <iframe
-              src="https://www.google.com/maps?q=Mumbai&output=embed"
-              width="800"
-              height="550">
+                src="https://www.google.com/maps?q=Mumbai&output=embed"
+                title="Google Map of Mumbai"
+                loading="lazy"
+                allowfullscreen>
             </iframe>
-            
-        
-        </body>
-    </html>
+        </section>
+
+        <section class="card" id="contact">
+            <h2>📩 Contact Me</h2>
+
+            <p>
+                Thank you for visiting my website!
+            </p>
+
+            <p>
+                Keep learning. Keep growing. Keep coding. 💜
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with ❤️ by Ashwini Waghmare</p>
+        <p>Contact: 9421891124</p>
+        <p>© 2026 | My Personal Website</p>
+    </footer>
+
+</body>
+</html>

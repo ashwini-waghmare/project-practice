@@ -1,172 +1,299 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Day 9</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 | Ashwini's Website</title>
+
     <style>
-        .box{
-            background-color: lightblue;
-            padding: 30px;
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7ff;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        /* Website Heading */
+        .site-title {
             text-align: center;
+            padding: 25px 15px;
+            color: #4f46e5;
+            font-size: 30px;
         }
 
-        @media (max-width: 600px) {
-            .box{
-                background-color: lightpink;
-                padding: 15px;
-            }
-
-            .box h1{
-                font-size: 25px;
-            }
-        }
-
-        .cards{
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card{
-            flex: 1;
-            padding: 30px;
-            text-align: center;
-            background-color: lightgreen;
-        }
-
-        @media (max-width: 600px){
-            .cards{
-                flex-direction: column;
-            }
-        }
-
-        .navbar{
+        /* Navbar */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px;
-            background-color: #333;
+            padding: 20px 7%;
+            background: #1e1b4b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px #00000020;
         }
 
-        .nav-links{
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 28px;
         }
 
-        .nav-links a{
-            color: black;
+        .nav-links a {
+            color: #e0e7ff;
             text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        #menubtn{
+        .nav-links a:hover {
+            color: #a5b4fc;
+        }
+
+        /* Hamburger Button */
+        #menubtn {
             display: none;
+            border: none;
+            background: #6366f1;
+            color: white;
+            padding: 8px 13px;
+            font-size: 24px;
+            border-radius: 8px;
+            cursor: pointer;
         }
 
+        /* Welcome Box */
+        .box {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 1100px;
+            width: calc(100% - 40px);
+            border-radius: 22px;
+            box-shadow: 0 12px 30px #6366f133;
+        }
 
+        .box h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .box p {
+            font-size: 18px;
+            color: #f3e8ff;
+        }
+
+        /* Cards Container */
+        .cards {
+            display: flex;
+            gap: 25px;
+            padding: 20px;
+            max-width: 1100px;
+            margin: 20px auto 50px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 35px 20px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e0e7ff;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px #312e8110;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 28px #6366f133;
+            border-color: #818cf8;
+        }
+
+        .card h2 {
+            color: #4f46e5;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #64748b;
+        }
+
+        /* Card Accent */
+        .card::before {
+            content: "";
+            display: block;
+            width: 45px;
+            height: 4px;
+            background: #a78bfa;
+            border-radius: 5px;
+            margin: 0 auto 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e1b4b;
+            color: #e0e7ff;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Tablet and Mobile */
+        @media (max-width: 600px) {
+            .site-title {
+                font-size: 25px;
+                padding: 20px 10px;
+            }
+
+            .navbar {
+                padding: 15px 20px;
+                flex-wrap: wrap;
+            }
+
+            #menubtn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                padding-top: 12px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px 5px;
+                border-top: 1px solid #3730a3;
+            }
+
+            .box {
+                padding: 40px 15px;
+                background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            }
+
+            .box h1 {
+                font-size: 28px;
+            }
+
+            .box p {
+                font-size: 16px;
+            }
+
+            .cards {
+                flex-direction: column;
+                gap: 18px;
+                padding: 15px 20px;
+            }
+
+            .card {
+                padding: 28px 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <h2>My Website</h2>
+    <h2 class="site-title">My Website ✨</h2>
 
-    <div class="navbar">
-        <div class="nav-links">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">Ashwini 💜</div>
+
+        <button id="menubtn"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Objects</a>
-        </div>
-    </div>
+        </nav>
 
-    <button id="menubtn">☰</button>
+    </header>
 
+    <!-- Welcome Section -->
     <div class="box">
-        <h1>Hello Ashwini</h1>
+        <h1>Hello Ashwini 🌸</h1>
         <p>Welcome to our website!</p>
     </div>
 
+    <!-- Cards Section -->
     <div class="cards">
-       <div class="card">
-          <h2>HTML</h2>
-          <p>I love HTML!</p>
-       </div>
 
-       <div class="card">
-          <h2>CSS</h2>
-          <p>I love CSS!</p>
-       </div>
+        <div class="card">
+            <h2>HTML</h2>
+            <p>I love HTML!</p>
+        </div>
 
-       <div class="card">
-          <h2>JavaScript</h2>
-          <p>I love JavaScript!</p>
-       </div>
+        <div class="card">
+            <h2>CSS</h2>
+            <p>I love CSS!</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>I love JavaScript!</p>
+        </div>
+
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by Ashwini Waghmare</p>
+        <p>© 2026 | My Website</p>
+    </footer>
 
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        const menuButton = document.getElementById("menubtn");
+        const navLinks = document.getElementById("navLinks");
 
+        menuButton.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
 
+            const isOpen = navLinks.classList.contains("active");
 
+            menuButton.setAttribute("aria-expanded", isOpen);
+            menuButton.textContent = isOpen ? "✕" : "☰";
+        });
+    </script>
 
-    <!-- <h1 id="name">Hello Ashwini</h1>
+    <!-- Your existing JavaScript practice file can be linked here
+    if you want to run its code. -->
 
-    <button onclick="changename()">Change Title</button>
+    <!-- <script src="day6.js"></script> -->
 
-    <!-- <p class="msg">Hello!</p> -->
-
-    
-    <!-- <h1 id="title">Welcome</h1>
-    <button id="btn">Click</button> -->
-
-    <!-- <input type="text" id="username" placeholder="Enter Your Name">
-    <p id="output"></p> -->
-
-    <!-- <select id="city">
-        <option value="">Select City</option>
-        <option value="Aurangabad">Aurangabad</option>
-        <option value="Mathura">Mathura</option>
-        <option value="Vrindavan">Vrindavan</option>
-    </select>
-
-    <p id="result"></p> -->
-
-    <!-- <form id="myForm">
-        <input type="text" id="nameInput" placeholder="Enter Your Name">
-        <button type="submit">Submit</button>
-    </form>
-
-    <p id="formOutput"></p> -->
-
-    <!-- <form id="login">
-        <input type="text" id="username" placeholder="Enter Name">
-        <input type="password" id="password" placeholder="Password">
-        <button id="submit">Login</button>
-    </form>
-
-    <p id="output"></p> -->
-    <!-- 
-    <form id="registerForm">
-
-    <input type="text" id="name" placeholder="Enter Name">
-
-    <input type="email" id="email" placeholder="Enter Email">
-
-    <select id="city">
-        <option value="">Select City</option>
-        <option value="Aurangabad">Aurangabad</option>
-        <option value="Mathura">Mathura</option>
-        <option value="Vrindavan">Vrindavan</option>
-    </select>
-
-    <button type="submit">Register</button>
-
-    </form>
-
-    <p id="result"></p> -->
-
-    
-
-    <script src="day6.js"></script>
 </body>
 </html>

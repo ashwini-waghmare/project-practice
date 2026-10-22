@@ -1,13 +1,190 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Semantic Html</title>
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Semantic Html</title>
+
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7ff;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4f46e5, #9333ea);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding: 18px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4f46e5;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #9333ea;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Sections */
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 5px 20px #312e8110;
+            transition: 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px #4f46e520;
+        }
+
+        section h2 {
+            color: #5b21b6;
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        section p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        /* Skills List */
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        li {
+            background: #ede9fe;
+            color: #5b21b6;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            background: #5b21b6;
+            color: white;
+        }
+
+        /* Date Input */
+        input[type="date"] {
+            display: block;
+            margin: 0 auto 35px;
+            padding: 14px;
+            border: 2px solid #c4b5fd;
+            border-radius: 10px;
+            background: white;
+            color: #334155;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="date"]:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 8px #7c3aed40;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            color: #ddd6fe;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                gap: 20px;
+                padding: 15px 8px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            section h2 {
+                font-size: 22px;
+            }
+
+            input[type="date"] {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
 
 <body>
+
     <header>
         <h1>My Website</h1>
-    </header>       
+    </header>
 
     <nav>
         <a href="#">Home</a>
@@ -20,60 +197,52 @@
             <h2>About Me</h2>
             <p>I am a Fullstack Developer</p>
         </section>
+
         <section>
             <h2>Skills:</h2>
             <ul>
-            <li>HTMl</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
+                <li>HTMl</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
             </ul>
         </section>
     </main>
 
     <input
-    type="date"
-    placeholder="Enter name"
-    required
-    maxlength="20"
+        type="date"
+        placeholder="Enter name"
+        required
+        maxlength="20"
     >
 
     <footer>
         <p>&copy; 2026 Ashwini Waghmare</p>
     </footer>
 
-    <!-- <input type="text">
-
+    <!--
+    <input type="text">
     <input type="email">
-
     <input type="password">
-
     <input type="number">
-
     <input type="date">
-
     <input type="time">
-
-    < input type="color">
-
+    <input type="color">
     <input type="file">
-
     <input type="range">
-
     <input type="search">
-
     <input type="url">
-
     <input type="tel">
-    
-required	Field must be filled
-placeholder	Shows hint text
-maxlength	Maximum characters
-min	Minimum value
-max	Maximum value
-readonly	Cannot edit
-disabled	Cannot use
-checked	Selected by default
-selected	Default option in dropdown
+
+    required   Field must be filled
+    placeholder Shows hint text
+    maxlength  Maximum characters
+    min        Minimum value
+    max        Maximum value
+    readonly   Cannot edit
+    disabled   Cannot use
+    checked    Selected by default
+    selected   Default option in dropdown
     -->
+
 </body>
 </html>
