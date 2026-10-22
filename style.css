@@ -1,0 +1,99 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7ff;
+  color: #1e293b;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #4338ca;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.practice-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(67, 56, 202, 0.12);
+}
+
+.practice-card h2 {
+  color: #312e81;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.practice-card p {
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.practice-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.practice-card a:hover {
+  opacity: 0.85;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 24px 14px;
+  }
+
+  .practice-card {
+    padding: 20px;
+  }
+}
